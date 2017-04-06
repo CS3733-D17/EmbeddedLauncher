@@ -1,1 +1,7 @@
+/.idea/
+/out/
+/nbproject/
+/build.xml
+/manifest.mf
+/build/
 /test/

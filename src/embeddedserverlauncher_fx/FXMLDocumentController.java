@@ -36,7 +36,7 @@ import org.glassfish.embeddable.GlassFishRuntime;
 public class FXMLDocumentController implements Initializable {
     
     public static final String WAR_FOLDER = "deploy\\";
-    public static final String LOC_PATH = "http://localhost:10080";
+    public static final String LOC_PATH = "http://localhost:8080";
     
     @FXML
     private Label stat;
@@ -100,8 +100,8 @@ public class FXMLDocumentController implements Initializable {
         try {
             deployedApps = new HashSet<>();
             GlassFishProperties glassfishProperties = new GlassFishProperties();
-            glassfishProperties.setPort("http-listener", 10080);
-            glassfishProperties.setPort("https-listener", 10081);
+            glassfishProperties.setPort("http-listener", 8080);
+            glassfishProperties.setPort("https-listener", 8081);
             glassfish = GlassFishRuntime.bootstrap().newGlassFish(glassfishProperties);
             state = 0;
             deployer=null;
